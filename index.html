@@ -18,7 +18,6 @@
         <ul>
             <li><a class="nav-link" href="#introduction">Introduction</a></li>
             <li><a class="nav-link" href="#@keyframes">@Keyframes</a></li>
-            <li><a class="nav-link" href="#animation_name">Animation Name</a></li>
             <li><a class="nav-link" href="#animation_duration">Animation Duration</a></li>
             <li><a class="nav-link" href="#animation_delay">Animation Delay</a></li>
             <li><a class="nav-link" href="#animation_iteration_count">Animation Iteration Count</a></li>
@@ -30,10 +29,6 @@
     </nav>
 
     <main id="main-doc">
-        <!--
-        6. min 5 code
-        -->
-
 
         <section class="main-section" id="introduction">
             <header>
@@ -77,15 +72,6 @@
                 </pre>
             </fieldset>
 
-
-        </section>
-
-        <section class="main-section" id="animation_name">
-            <header>
-                <h2>Animation Name</h2>
-            </header>
-            <p></p>
-            <pre></pre>
 
         </section>
 
@@ -253,10 +239,10 @@
             <p>The animation-direction property can have the following values:</p>
 
             <ul>
-                <li><em>normal</em> - The animation is played as normal (forwards). This is default</li>
-                <li><em>reverse</em> - The animation is played in reverse direction (backwards)</li>
-                <li><em>alternate</em> - The animation is played forwards first, then backwards</li>
-                <li><em>alternate-reverse</em> - The animation is played backwards first, then forwards</li>
+                <li><code>normal</code> - The animation is played as normal (forwards). This is default</li>
+                <li><code>reverse</code> - The animation is played in reverse direction (backwards)</li>
+                <li><code>alternate</code> - The animation is played forwards first, then backwards</li>
+                <li><code>alternate-reverse</code> - The animation is played backwards first, then forwards</li>
             </ul>
 
             <p>The following example will run the animation in reverse direction (backwards):</p>
@@ -325,13 +311,12 @@
             <p>The animation-timing-function property can have the following values:</p>
 
             <ul>
-                <li><em>ease</em> - Specifies an animation with a slow start, then fast, then end slowly (this is
-                    default)</li>
-                <li><em>linear</em> - Specifies an animation with the same speed from start to end</li>
-                <li><em>ease-in</em> - Specifies an animation with a slow start</li>
-                <li><em>ease-out</em> - Specifies an animation with a slow end</li>
-                <li><em>ease-in-out</em> - Specifies an animation with a slow start and end</li>
-                <li><em>cubic-bezier(n,n,n,n)</em> - Lets you define your own values in a cubic-bezier function</li>
+                <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+                <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
+                <li><code>ease-in</code> - Specifies an animation with a slow start</li>
+                <li><code>ease-out</code> - Specifies an animation with a slow end</li>
+                <li><code>ease-in-out</code> - Specifies an animation with a slow start and end</li>
+                <li><code>cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
             </ul>
 
             <p>The following example shows some of the different speed curves that can be used:</p>
@@ -362,13 +347,13 @@
             <p>The animation-fill-mode property can have the following values:</p>
 
             <ul>
-                <li><em>none</em> - Default value. Animation will not apply any styles to the element before or after it
+                <li><code>none</code> - Default value. Animation will not apply any styles to the element before or after it
                     is executing</li>
-                <li><em>forwards</em> - The element will retain the style values that is set by the last keyframe
+                <li><code>forwards</code> - The element will retain the style values that is set by the last keyframe
                     (depends on animation-direction and animation-iteration-count)</li>
-                <li><em>backwards</em> - The element will get the style values that is set by the first keyframe
+                <li><code>backwards</code> - The element will get the style values that is set by the first keyframe
                     (depends on animation-direction), and retain this during the animation-delay period</li>
-                <li><em>both</em> - The animation will follow the rules for both forwards and backwards, extending the
+                <li><code>both</code> - The animation will follow the rules for both forwards and backwards, extending the
                     animation properties in both directions</li>
             </ul>
 
