@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Animation Documentation</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <nav id="navbar">
-        <header>
-            <h1>CSS Animation Documentation</h1>
-            <p>This is an overview of how to animate HTML elements using CSS programming.</p>
-        </header>
-        <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#@keyframes">@Keyframes</a></li>
-            <li><a class="nav-link" href="#animation_duration">Animation Duration</a></li>
-            <li><a class="nav-link" href="#animation_delay">Animation Delay</a></li>
-            <li><a class="nav-link" href="#animation_iteration_count">Animation Iteration Count</a></li>
-            <li><a class="nav-link" href="#animation_direction">Animation Direction</a></li>
-            <li><a class="nav-link" href="#animation_timing_function">Animation Timing Function</a></li>
-            <li><a class="nav-link" href="#animation_fill_mode">Animation Fill Mode</a></li>
-            <li><a class="nav-link" href="#animation_shorthand_property">Animation Shorthand Property</a></li>
-        </ul>
-    </nav>
+    <div class="nav">
+        <nav id="navbar">
+            <header>
+                <h1>CSS Animation Documentation</h1>
+                <p>This is an overview of how to animate HTML elements using CSS programming.</p>
+            </header>
+            <ul>
+                <li><a class="nav-link" href="#introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#@keyframes">@Keyframes</a></li>
+                <li><a class="nav-link" href="#animation_duration">Animation Duration</a></li>
+                <li><a class="nav-link" href="#animation_delay">Animation Delay</a></li>
+                <li><a class="nav-link" href="#animation_iteration_count">Animation Iteration Count</a></li>
+                <li><a class="nav-link" href="#animation_direction">Animation Direction</a></li>
+                <li><a class="nav-link" href="#animation_timing_function">Animation Timing Function</a></li>
+                <li><a class="nav-link" href="#animation_fill_mode">Animation Fill Mode</a></li>
+                <li><a class="nav-link" href="#animation_shorthand_property">Animation Shorthand Property</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main id="main-doc">
 
@@ -311,7 +315,8 @@
             <p>The animation-timing-function property can have the following values:</p>
 
             <ul>
-                <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+                <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
+                    default)</li>
                 <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
                 <li><code>ease-in</code> - Specifies an animation with a slow start</li>
                 <li><code>ease-out</code> - Specifies an animation with a slow end</li>
@@ -347,13 +352,15 @@
             <p>The animation-fill-mode property can have the following values:</p>
 
             <ul>
-                <li><code>none</code> - Default value. Animation will not apply any styles to the element before or after it
+                <li><code>none</code> - Default value. Animation will not apply any styles to the element before or
+                    after it
                     is executing</li>
                 <li><code>forwards</code> - The element will retain the style values that is set by the last keyframe
                     (depends on animation-direction and animation-iteration-count)</li>
                 <li><code>backwards</code> - The element will get the style values that is set by the first keyframe
                     (depends on animation-direction), and retain this during the animation-delay period</li>
-                <li><code>both</code> - The animation will follow the rules for both forwards and backwards, extending the
+                <li><code>both</code> - The animation will follow the rules for both forwards and backwards, extending
+                    the
                     animation properties in both directions</li>
             </ul>
 
