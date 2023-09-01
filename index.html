@@ -142,25 +142,26 @@
 
         <section class="main-section" id="animation_delay">
             <h2>Animation Delay</h2>
-            <p>The animation-delay property specifies a delay for the start of an animation.</p>
-            <p>The following example has a 2 seconds delay before starting the animation:</p>
+            <p>The <strong>animation-delay</strong> property is used to define a delay for the start of an animation.</p>
+            <p>In the example below, the animation delays 2 seconds to start:</p>
 
             <fieldset>
-                <legend>Example</legend>
+                <legend>Example:</legend>
                 <pre>
     div {
         width: 100px;
         height: 100px;
         position: relative;
         background-color: red;
-        animation-name: example;
+        animation-name: abc;
         animation-duration: 4s;
         animation-delay: 2s;
     }</pre>
             </fieldset>
 
-            <p>Negative values are also allowed. If using negative values, the animation will start as if it had already
-                been playing for <em>N</em> seconds.</p>
+            <p>Delay can be defined by a negative value as well. 
+                This will mean that the animation will start as if it was 
+                already in motion for <em>N</em> seconds.</p> <!--I stopped text reviewing here-->
             <p>In the following example, the animation will start as if it had already been playing for 2 seconds:</p>
 
             <fieldset>
