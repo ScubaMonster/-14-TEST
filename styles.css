@@ -1,44 +1,108 @@
-@media only screen and (min-width: 700px) {
+@media only screen and (max-width: 750px) {
     body {
-        display: flex;
         background-color: lightblue;
-        gap: 30px;
+    }
+    aside{
+        display: none; 
+        /*I want to hide the nav-bar, 
+        place a three horizontal lines icon
+        to access it,
+        and make the section take the whole
+        space, when the screen is small.*/
+    }
+    section{
+        width: 100vw; 
     }
   }
-  
-html {
-    font-family: Tahoma, sans-serif;
-}
 
 body {
+    box-sizing: border-box;
     background-color: #fff3da;
+    font-family: monospace, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 code, pre {
     font-family: 'Nova Mono', monospace;
+    
+}
+
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    margin: 0;
+    border-bottom-left-radius: 30px;
+    text-align: center;
 }
 
 section {
-    padding: 30px;
-    margin: 30px;
-    background-color: #dfccfb;
-    border-radius: 30px;
-    box-shadow: 10px 10px #beadfa;
+    /*why does it have so much space on top?
+    and why does it collapse into aside?*/
+    width: 60%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-right: auto;
 }
 
-.nav {
-    padding: 30px;
-    margin: 10px;
-    background-color: #dfccfb;
+aside {
+    width: 25%;
+    min-width: 210px;
+    max-width: 210px;
+    position: sticky;
+    overflow: auto;
+    float: right;
+    margin: 30px 10px 10px 10px;
+}
+
+header, section, aside {
+    background-color: #FFCCFF;
+    box-shadow: 10px 10px #97479e;
+}
+
+section, aside {
+    height: auto;
     border-radius: 30px;
-    box-shadow: 10px 10px #beadfa;
+    padding: 20px;
+    top: 20%; /*affects only aside*/
+}
+
+li {
+    line-height: 1.5em
+}
+
+li>a:link {
+    text-decoration: none;
+    color: #330033;
+}
+
+li>a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+fieldset{
+    /*I can't make it fit...
+    max-width: max-content;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    ...That's what she said!*/
 }
 
 
-
-
-
-
+  
+ 
 
 
 

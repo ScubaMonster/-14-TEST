@@ -12,15 +12,18 @@
 </head>
 
 <body>
-    <div class="nav">
+    <header>
+        <h1>CSS Animation Documentation</h1>
+        <h3>freeCodeCamp's Responsive Web Design certifivation project</p>
+    </header>
+
+    <aside class="nav">
+        <p>This is an overview of how to animate HTML elements using CSS programming.</p>
         <nav id="navbar">
-            <header>
-                <h1>CSS Animation Documentation</h1>
-                <p>This is an overview of how to animate HTML elements using CSS programming.</p>
-            </header>
             <ul>
                 <li><a class="nav-link" href="#introduction">Introduction</a></li>
                 <li><a class="nav-link" href="#@keyframes">@Keyframes</a></li>
+                <li><a class="nav-link" href="#animation-name">Animation Name</a></li>
                 <li><a class="nav-link" href="#animation_duration">Animation Duration</a></li>
                 <li><a class="nav-link" href="#animation_delay">Animation Delay</a></li>
                 <li><a class="nav-link" href="#animation_iteration_count">Animation Iteration Count</a></li>
@@ -30,109 +33,96 @@
                 <li><a class="nav-link" href="#animation_shorthand_property">Animation Shorthand Property</a></li>
             </ul>
         </nav>
-    </div>
+    </aside>
 
     <main id="main-doc">
 
         <section class="main-section" id="introduction">
-            <header>
-                <h2>Introduction</h2>
-            </header>
-            <p>CSS allows animation of HTML elements without using JavaScript or Flash!</p>
-            <p>An animation lets an element gradually change from one style to another.</p>
-            <p>You can change as many CSS properties you want, as many times as you want.</p>
-            <p>To use CSS animation, you must first specify some keyframes for the animation.</p>
-            <p>Keyframes hold what styles the element will have at certain times.</p>
-
+            <h2>Introduction</h2>
+            <p>CSS Animation is a technique that allows HTML elements to smoothly transition from one style to another.
+            </p>
+            <p>With Animation, it is possible to modify numerous CSS properties once or repeatedly.</p>
+            <p>To enable it, you need to define <em>keyframes</em> outlining the styles that the element will adopt at
+                specific moments.</p>
         </section>
 
         <section class="main-section" id="@keyframes">
-            <header>
-                <h2>@Keyframes</h2>
-            </header>
-            <p>When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the
-                current style to the new style at certain times.</p>
-            <p>To get an animation to work, you must bind the animation to an element.</p>
-            <p>The following example binds the "example" animation to the "div" element. The animation will last for 4
-                seconds, and it will gradually change the background-color of the "div" element from "red" to "yellow":
+            <h2>@Keyframes</h2>
+            <p>To define the CSS styles of the animation, you employ the at-rule <strong>@keyframes</strong> using the syntax:</p>
+            <pre>@keyframes abc {
+                from {property: value;}
+                to {property: value;}
+                }
+            </pre>
+        </section>
+
+        <section class="main-section" id="animation-name">
+            <h2>Animation Name</h2>
+            <p>The <strong>animation-name</strong> property is used to connect the @keyframes rule to the element you wish to animate.
             </p>
             <fieldset>
-                <legend>Example</legend>
+                <legend>Here's an example:</legend>
                 <pre>
-                    /* The animation code */
-                    @keyframes example {
-                        from {background-color: red;}
-                        to {background-color: yellow;}
-                    }
-                    
-                    /* The element to apply the animation to */
-                    div {
-                      width: 100px;
-                      height: 100px;
-                      background-color: red;
-                      animation-name: example;
-                      animation-duration: 4s;
-                    }
+                element {
+                    width: 100px;
+                    height:50px;
+                    animation-name: abc;
+                }
+                             
+                @keyframes abc {
+                from {property: value;}
+                to {property: value;}
+                }
                 </pre>
             </fieldset>
-
-
         </section>
 
         <section class="main-section" id="animation_duration">
-            <header>
-                <h2>Animation Duration</h2>
-            </header>
-            <p><strong>Note: </strong>The animation-duration property defines how long an animation should take to
-                complete.
-                If the animation-duration property is not specified, no animation will occur, because the default
-                value is 0s (0 seconds).</p>
+            <h2>Animation Duration</h2>
+            <p>To set the time an animation will take to complete, you use the <strong>animation-duration</strong> property</p>
 
-            <p>In the example above we have specified when the style will change by using the keywords "from" and
-                "to" (which represents 0% (start) and 100% (complete)).</p>
+            <p>The keywords "from" and "to" represent the start and completion points of your Animation.</p>
 
-            <p>It is also possible to use percent. By using percent, you can add as many style changes as you like.
-            </p>
+            <p>They can also be defined with percentages from 0% to 100%. This way you can add more style changes to
+                your element at once. </p>
 
-            <p>The following example will change the background-color of the "div" element when the animation is 25%
-                complete, 50% complete, and again when the animation is 100% complete:</p>
+            <p>In the example below you can see the change in rotation of a square &lt;div&gt; element setting the
+                animation at equal points from start to completion:</p>
 
             <fieldset>
                 <legend>Example</legend>
                 <pre>
                     /* The animation code */
-                    @keyframes example {
-                      0%   {background-color: red;}
-                      25%  {background-color: yellow;}
-                      50%  {background-color: blue;}
-                      100% {background-color: green;}
+                    @keyframes abc {
+                      0%   {transform: rotate(0deg);}
+                      25%  {transform: rotate(20deg);}
+                      50%  {transform: rotate(40deg);}
+                      100% {transform: rotate(60deg);}
                     }
                     
                     /* The element to apply the animation to */
                     div {
                       width: 100px;
                       height: 100px;
-                      background-color: red;
-                      animation-name: example;
+                      background-color: blue;
+                      animation-name: abc;
                       animation-duration: 4s;
                     }
                 </pre>
             </fieldset>
 
-            <p>The following example will change both the background-color and the position of the "div" element when
-                the animation is 25% complete, 50% complete, and again when the animation is 100%
-                complete:</p>
+            <p>In the following abc example both the rotation and the position of the &lt;div&gt; element will change
+                during the same time:</p>
 
             <fieldset>
                 <legend>Example</legend>
                 <pre>
                     /* The animation code */
-                    @keyframes example {
-                      0%   {background-color:red; left:0px; top:0px;}
-                      25%  {background-color:yellow; left:200px; top:0px;}
-                      50%  {background-color:blue; left:200px; top:200px;}
-                      75%  {background-color:green; left:0px; top:200px;}
-                      100% {background-color:red; left:0px; top:0px;}
+                    @keyframes abc {
+                        0%   {transform: rotate(0deg); left:0; top:0;}
+                        25%  {transform: rotate(20deg); left:100; top:50;}
+                        50%  {transform: rotate(40deg); left:200; top:100;}
+                        100% {transform: rotate(60deg); left:300; top:200;}
                     }
                     
                     /* The element to apply the animation to */
@@ -140,8 +130,8 @@
                       width: 100px;
                       height: 100px;
                       position: relative;
-                      background-color: red;
-                      animation-name: example;
+                      background-color: blue;
+                      animation-name: abc;
                       animation-duration: 4s;
                     }
                 </pre>
@@ -150,9 +140,7 @@
         </section>
 
         <section class="main-section" id="animation_delay">
-            <header>
-                <h2>Animation Delay</h2>
-            </header>
+            <h2>Animation Delay</h2>
             <p>The animation-delay property specifies a delay for the start of an animation.</p>
             <p>The following example has a 2 seconds delay before starting the animation:</p>
 
@@ -192,9 +180,7 @@
 
         </section>
         <section class="main-section" id="animation_iteration_count">
-            <header>
-                <h2>Animation Iteration Count</h2>
-            </header>
+            <h2>Animation Iteration Count</h2>
             <p>The animation-iteration-count property specifies the number of times an animation should run.</p>
 
             <p>The following example will run the animation 3 times before it stops:</p>
@@ -234,9 +220,7 @@
         </section>
 
         <section class="main-section" id="animation_direction">
-            <header>
-                <h2>Animation Direction</h2>
-            </header>
+            <h2>Animation Direction</h2>
             <p>The animation-direction property specifies whether an animation should be played forwards, backwards or
                 in alternate cycles.</p>
 
@@ -307,9 +291,7 @@
         </section>
 
         <section class="main-section" id="animation_timing_function">
-            <header>
-                <h2>Animation Timing Function</h2>
-            </header>
+            <h2>Animation Timing Function</h2>
             <p>The animation-timing-function property specifies the speed curve of the animation.</p>
 
             <p>The animation-timing-function property can have the following values:</p>
@@ -340,9 +322,7 @@
         </section>
 
         <section class="main-section" id="animation_fill_mode">
-            <header>
-                <h2>Animation Fill Mode</h2>
-            </header>
+            <h2>Animation Fill Mode</h2>
             <p>CSS animations do not affect an element before the first keyframe is played or after the last keyframe is
                 played. The animation-fill-mode property can override this behavior.</p>
 
@@ -425,9 +405,7 @@
         </section>
 
         <section class="main-section" id="animation_shorthand_property">
-            <header>
-                <h2>Animation Shorthand Property</h2>
-            </header>
+            <h2>Animation Shorthand Property</h2>
             <p>The example below uses six of the animation properties:</p>
 
             <fieldset>
