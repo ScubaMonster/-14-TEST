@@ -90,16 +90,14 @@ p {
     text-justify: inter-word;
 }
 
+/*I can't make it fit...
 fieldset{
-    /*I can't make it fit...
     max-width: max-content;
     margin-left: 0;
     margin-right: 0;
-    padding: 0;
-
-    ...That's what she said!*/
+    padding: 0;  
 }
-
+ ...That's what she said!*/
 
   
  

@@ -48,38 +48,41 @@
 
         <section class="main-section" id="@keyframes">
             <h2>@Keyframes</h2>
-            <p>To define the CSS styles of the animation, you employ the at-rule <strong>@keyframes</strong> using the syntax:</p>
-            <pre>@keyframes abc {
-                from {property: value;}
-                to {property: value;}
-                }
-            </pre>
+            <p>To define the CSS styles of the animation, you employ the at-rule <strong>@keyframes</strong> using the
+                syntax:</p>
+            <pre>
+    @keyframes abc {
+        from {property: value;}
+        to {property: value;}
+    }</pre>
         </section>
 
         <section class="main-section" id="animation-name">
             <h2>Animation Name</h2>
-            <p>The <strong>animation-name</strong> property is used to connect the @keyframes rule to the element you wish to animate.
+            <p>The <strong>animation-name</strong> property is used to connect the @keyframes rule to the element you
+                wish to animate.
             </p>
             <fieldset>
                 <legend>Here's an example:</legend>
                 <pre>
-                element {
-                    width: 100px;
-                    height:50px;
-                    animation-name: abc;
-                }
-                             
-                @keyframes abc {
-                from {property: value;}
-                to {property: value;}
-                }
-                </pre>
+    element {
+        width: 100px;
+        height:50px;
+        animation-name: abc;
+    }
+                 
+    @keyframes abc {
+        from {property: value;}
+        to {property: value;}
+    }</pre>
+
             </fieldset>
         </section>
 
         <section class="main-section" id="animation_duration">
             <h2>Animation Duration</h2>
-            <p>To set the time an animation will take to complete, you use the <strong>animation-duration</strong> property</p>
+            <p>To set the time an animation will take to complete, you use the <strong>animation-duration</strong>
+                property</p>
 
             <p>The keywords "from" and "to" represent the start and completion points of your Animation.</p>
 
@@ -92,23 +95,22 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                    /* The animation code */
-                    @keyframes abc {
-                      0%   {transform: rotate(0deg);}
-                      25%  {transform: rotate(20deg);}
-                      50%  {transform: rotate(40deg);}
-                      100% {transform: rotate(60deg);}
-                    }
+/* The animation code */
+    @keyframes abc {
+        0%   {transform: rotate(0deg);}
+        25%  {transform: rotate(20deg);}
+        50%  {transform: rotate(40deg);}
+        100% {transform: rotate(60deg);}
+    }
                     
-                    /* The element to apply the animation to */
-                    div {
-                      width: 100px;
-                      height: 100px;
-                      background-color: blue;
-                      animation-name: abc;
-                      animation-duration: 4s;
-                    }
-                </pre>
+/* The element to apply the animation to */
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 4s;
+    }</pre>
             </fieldset>
 
             <p>In the following abc example both the rotation and the position of the &lt;div&gt; element will change
@@ -117,24 +119,23 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                    /* The animation code */
-                    @keyframes abc {
-                        0%   {transform: rotate(0deg); left:0; top:0;}
-                        25%  {transform: rotate(20deg); left:100; top:50;}
-                        50%  {transform: rotate(40deg); left:200; top:100;}
-                        100% {transform: rotate(60deg); left:300; top:200;}
-                    }
-                    
-                    /* The element to apply the animation to */
-                    div {
-                      width: 100px;
-                      height: 100px;
-                      position: relative;
-                      background-color: blue;
-                      animation-name: abc;
-                      animation-duration: 4s;
-                    }
-                </pre>
+/* The animation code */
+    @keyframes abc {
+        0%   {transform: rotate(0deg); left:0; top:0;}
+        25%  {transform: rotate(20deg); left:100; top:50;}
+        50%  {transform: rotate(40deg); left:200; top:100;}
+        100% {transform: rotate(60deg); left:300; top:200;}
+    }
+    
+/* The element to apply the animation to */
+    div {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      background-color: blue;
+      animation-name: abc;
+      animation-duration: 4s;
+    }</pre>
             </fieldset>
 
         </section>
@@ -147,16 +148,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-delay: 2s;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-delay: 2s;
+    }</pre>
             </fieldset>
 
             <p>Negative values are also allowed. If using negative values, the animation will start as if it had already
@@ -166,16 +166,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-delay:-2s;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-delay:-2s;
+    }</pre>
             </fieldset>
 
         </section>
@@ -188,16 +187,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-iteration-count: 3;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+    }</pre>
             </fieldset>
 
             <p>The following example uses the value "infinite" to make the animation continue for ever:</p>
@@ -205,16 +203,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-iteration-count: infinite;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }</pre>   
             </fieldset>
 
         </section>
@@ -238,16 +235,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-direction: reverse;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-direction: reverse;
+    }</pre>
             </fieldset>
 
             <p>The following example uses the value "alternate" to make the animation run forwards first, then
@@ -256,17 +252,16 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-iteration-count: 2;
-                    animation-direction: alternate;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }</pre>
             </fieldset>
 
             <p>The following example uses the value "alternate-reverse" to make the animation run backwards first, then
@@ -275,17 +270,16 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    position: relative;
-                    background-color: red;
-                    animation-name: example;
-                    animation-duration: 4s;
-                    animation-iteration-count: 2;
-                    animation-direction: alternate-reverse;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 2;
+        animation-direction: alternate-reverse;
+    }</pre>
             </fieldset>
 
         </section>
@@ -311,11 +305,11 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                    #div1 {animation-timing-function: linear;}
-                    #div2 {animation-timing-function: ease;}
-                    #div3 {animation-timing-function: ease-in;}
-                    #div4 {animation-timing-function: ease-out;}
-                    #div5 {animation-timing-function: ease-in-out;}
+    #div1 {animation-timing-function: linear;}
+    #div2 {animation-timing-function: ease;}
+    #div3 {animation-timing-function: ease-in;}
+    #div4 {animation-timing-function: ease-out;}
+    #div5 {animation-timing-function: ease-in-out;}
                 </pre>
             </fieldset>
 
@@ -350,16 +344,15 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    background: red;
-                    position: relative;
-                    animation-name: example;
-                    animation-duration: 3s;
-                    animation-fill-mode: forwards;
-                  }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }</pre>
             </fieldset>
 
             <p>The following example lets the "div" element get the style values set by the first keyframe before
@@ -369,17 +362,16 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    background: red;
-                    position: relative;
-                    animation-name: example;
-                    animation-duration: 3s;
-                    animation-delay: 2s;
-                    animation-fill-mode: backwards;
-                    }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }</pre>
             </fieldset>
 
             <p>The following example lets the "div" element get the style values set by the first keyframe before the
@@ -389,17 +381,16 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    width: 100px;
-                    height: 100px;
-                    background: red;
-                    position: relative;
-                    animation-name: example;
-                    animation-duration: 3s;
-                    animation-delay: 2s;
-                    animation-fill-mode: both;
-                    }
-                </pre>
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+    }</pre>
             </fieldset>
 
         </section>
@@ -411,15 +402,14 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    animation-name: example;
-                    animation-duration: 5s;
-                    animation-timing-function: linear;
-                    animation-delay: 2s;
-                    animation-iteration-count: infinite;
-                    animation-direction: alternate;
-                  }
-                </pre>
+    div {
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }</pre>
             </fieldset>
 
             <p>The same animation effect as above can be achieved by using the shorthand animation property:</p>
@@ -427,10 +417,9 @@
             <fieldset>
                 <legend>Example</legend>
                 <pre>
-                div {
-                    animation: example 5s linear 2s infinite alternate;
-                  }
-                </pre>
+    div {
+        animation: example 5s linear 2s infinite alternate;
+    }</pre>
             </fieldset>
 
         </section>
