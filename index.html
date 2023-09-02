@@ -161,8 +161,8 @@
 
             <p>Delay can be defined by a negative value as well. 
                 This will mean that the animation will start as if it was 
-                already in motion for <em>N</em> seconds.</p> <!--I stopped text reviewing here-->
-            <p>In the following example, the animation will start as if it had already been playing for 2 seconds:</p>
+                already in motion for <em>N</em> seconds.</p> 
+            <p>The example bellow shows the animation as if it had been started 2 seconds ago:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -172,7 +172,7 @@
         height: 100px;
         position: relative;
         background-color: red;
-        animation-name: example;
+        animation-name: abc;
         animation-duration: 4s;
         animation-delay:-2s;
     }</pre>
@@ -181,9 +181,9 @@
         </section>
         <section class="main-section" id="animation_iteration_count">
             <h2>Animation Iteration Count</h2>
-            <p>The animation-iteration-count property specifies the number of times an animation should run.</p>
+            <p>Using the <strong>animation-iteration-count</strong> property you can set the number of times the animation will run.</p>
 
-            <p>The following example will run the animation 3 times before it stops:</p>
+            <p>The animation in the following example will play for 4 times before it stops:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -192,14 +192,14 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
-        animation-iteration-count: 3;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 3s;
+        animation-iteration-count: 4;
     }</pre>
             </fieldset>
 
-            <p>The following example uses the value "infinite" to make the animation continue for ever:</p>
+            <p>Setting the value to "infinite" will allow the animation to play for ever:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -208,9 +208,9 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 3s;
         animation-iteration-count: infinite;
     }</pre>   
             </fieldset>
@@ -219,8 +219,8 @@
 
         <section class="main-section" id="animation_direction">
             <h2>Animation Direction</h2>
-            <p>The animation-direction property specifies whether an animation should be played forwards, backwards or
-                in alternate cycles.</p>
+            <p>With the <strong>animation-direction</strong> property you can define whether an animation should be played forwards, backwards or
+                in alternate cycles.</p><!--I stopped text reviewing here - fixed only the examples-->
 
             <p>The animation-direction property can have the following values:</p>
 
@@ -240,9 +240,9 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 3s;
         animation-direction: reverse;
     }</pre>
             </fieldset>
@@ -257,9 +257,9 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 3s;
         animation-iteration-count: 2;
         animation-direction: alternate;
     }</pre>
@@ -275,10 +275,10 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
-        animation-name: example;
-        animation-duration: 4s;
-        animation-iteration-count: 2;
+        background-color: blue;
+        animation-name: abc;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
         animation-direction: alternate-reverse;
     }</pre>
             </fieldset>
@@ -287,7 +287,7 @@
 
         <section class="main-section" id="animation_timing_function">
             <h2>Animation Timing Function</h2>
-            <p>The animation-timing-function property specifies the speed curve of the animation.</p>
+            <p>The <strong>animation-timing-function</strong> property specifies the speed curve of the animation.</p>
 
             <p>The animation-timing-function property can have the following values:</p>
 
@@ -319,7 +319,7 @@
         <section class="main-section" id="animation_fill_mode">
             <h2>Animation Fill Mode</h2>
             <p>CSS animations do not affect an element before the first keyframe is played or after the last keyframe is
-                played. The animation-fill-mode property can override this behavior.</p>
+                played. The <strong>animation-fill-mode</strong> property can override this behavior.</p>
 
             <p>The animation-fill-mode property specifies a style for the target element when the animation is not
                 playing (before it starts, after it ends, or both).</p>
@@ -426,6 +426,10 @@
         </section>
 
     </main>
+
+    <footer>
+        <p>Material is based on the <a href="https://www.w3schools.com/" target="_blank">w3schools</a> CSS tutorial.</p>
+    </footer>
 </body>
 
 </html>
