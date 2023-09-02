@@ -31,6 +31,8 @@
                 <li><a class="nav-link" href="#animation_timing_function">Animation Timing Function</a></li>
                 <li><a class="nav-link" href="#animation_fill_mode">Animation Fill Mode</a></li>
                 <li><a class="nav-link" href="#animation_shorthand_property">Animation Shorthand Property</a></li>
+                <li><a class="nav-link" href="#a11y">Accessibility</a></li>
+                <li><a class="nav-link" href="#disclaimer">Disclaimer</a></li>
             </ul>
         </nav>
     </aside>
@@ -109,7 +111,7 @@
         height: 100px;
         background-color: blue;
         animation-name: abc;
-        animation-duration: 4s;
+        animation-duration: 3s;
     }</pre>
             </fieldset>
 
@@ -134,7 +136,7 @@
       position: relative;
       background-color: blue;
       animation-name: abc;
-      animation-duration: 4s;
+      animation-duration: 3s;
     }</pre>
             </fieldset>
 
@@ -152,9 +154,9 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
+        background-color: blue;
         animation-name: abc;
-        animation-duration: 4s;
+        animation-duration: 5s;
         animation-delay: 2s;
     }</pre>
             </fieldset>
@@ -171,9 +173,9 @@
         width: 100px;
         height: 100px;
         position: relative;
-        background-color: red;
+        background-color: blue;
         animation-name: abc;
-        animation-duration: 4s;
+        animation-duration: 3s;
         animation-delay:-2s;
     }</pre>
             </fieldset>
@@ -219,19 +221,19 @@
 
         <section class="main-section" id="animation_direction">
             <h2>Animation Direction</h2>
-            <p>With the <strong>animation-direction</strong> property you can define whether an animation should be played forwards, backwards or
-                in alternate cycles.</p><!--I stopped text reviewing here - fixed only the examples-->
+            <p>With the <strong>animation-direction</strong> property you can define if an animation will play forwards, backwards or
+                in alternate cycles.</p>
 
-            <p>The animation-direction property can have the following values:</p>
+            <p>These are the values you can use:</p>
 
             <ul>
-                <li><code>normal</code> - The animation is played as normal (forwards). This is default</li>
-                <li><code>reverse</code> - The animation is played in reverse direction (backwards)</li>
-                <li><code>alternate</code> - The animation is played forwards first, then backwards</li>
-                <li><code>alternate-reverse</code> - The animation is played backwards first, then forwards</li>
+                <li><code>normal</code> - This is the default. The animation will play forwards. </li>
+                <li><code>reverse</code> - The animation will play in reverse direction (backwards)</li>
+                <li><code>alternate</code> - The animation will play forwards first, then backwards</li>
+                <li><code>alternate-reverse</code> - The animation will play backwards first, then forwards</li>
             </ul>
 
-            <p>The following example will run the animation in reverse direction (backwards):</p>
+            <p>The animation in the example below will play in reverse direction (backwards):</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -247,8 +249,7 @@
     }</pre>
             </fieldset>
 
-            <p>The following example uses the value "alternate" to make the animation run forwards first, then
-                backwards:</p>
+            <p>In the example bellow, the animation will play forwards first, and then backwards:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -265,8 +266,7 @@
     }</pre>
             </fieldset>
 
-            <p>The following example uses the value "alternate-reverse" to make the animation run backwards first, then
-                forwards:</p>
+            <p>In this example, the animation will run backwards first, and then forwards:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -287,34 +287,20 @@
 
         <section class="main-section" id="animation_timing_function">
             <h2>Animation Timing Function</h2>
-            <p>The <strong>animation-timing-function</strong> property specifies the speed curve of the animation.</p>
+            <p>The <strong>animation-timing-function</strong> property defines the speed curve of the animation.</p>
 
-            <p>The animation-timing-function property can have the following values:</p>
+            <p>You can use these values:</p>
 
             <ul>
-                <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is
-                    default)</li>
-                <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
-                <li><code>ease-in</code> - Specifies an animation with a slow start</li>
-                <li><code>ease-out</code> - Specifies an animation with a slow end</li>
-                <li><code>ease-in-out</code> - Specifies an animation with a slow start and end</li>
-                <li><code>cubic-bezier(n,n,n,n)</code> - Lets you define your own values in a cubic-bezier function</li>
+                <li><code>ease</code> - This is the default. The animation will start slow, then go fast, then end slowly.</li>
+                <li><code>linear</code> - The animation will have the same speed from start to finish.</li>
+                <li><code>ease-in</code> - The animation will start slow.</li>
+                <li><code>ease-out</code> - The animation will end slow.</li>
+                <li><code>ease-in-out</code> - The animation will start slow, and end slow.</li>
+                <li><code>cubic-bezier(n,n,n,n)</code> - You can specify your own values as a function</li>
             </ul>
 
-            <p>The following example shows some of the different speed curves that can be used:</p>
-
-            <fieldset>
-                <legend>Example</legend>
-                <pre>
-    #div1 {animation-timing-function: linear;}
-    #div2 {animation-timing-function: ease;}
-    #div3 {animation-timing-function: ease-in;}
-    #div4 {animation-timing-function: ease-out;}
-    #div5 {animation-timing-function: ease-in-out;}
-                </pre>
-            </fieldset>
-
-        </section>
+        </section><!--I stopped text reviewing here - fixed only the examples-->
 
         <section class="main-section" id="animation_fill_mode">
             <h2>Animation Fill Mode</h2>
@@ -398,7 +384,7 @@
 
         <section class="main-section" id="animation_shorthand_property">
             <h2>Animation Shorthand Property</h2>
-            <p>The example below uses six of the animation properties:</p>
+            <p>You can apply multiple animation properties in one line:</p>
 
             <fieldset>
                 <legend>Example</legend>
@@ -425,9 +411,17 @@
 
         </section>
 
+        <section class="main-section" id="a11y">
+            <h2>Accessibility</h2>
+            <p>Please keep in mind that flashy animations can be stressful to folks with ADHD or trigger ...  </p>
+            <p>Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
+
+                Consider providing a mechanism for pausing or disabling animation as well as using the Reduced Motion Media Query to create a complimentary experience for users who have expressed a preference for reduced animated experiences.</p>
+        </section>
+
     </main>
 
-    <footer>
+    <footer id="desclaimer">
         <p>Material is based on the <a href="https://www.w3schools.com/" target="_blank">w3schools</a> CSS tutorial.</p>
     </footer>
 </body>
