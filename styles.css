@@ -63,7 +63,10 @@ section {
     width: 70vw;
     margin: 2rem 2rem;
     padding: 2rem 1rem 1rem;
-    
+}
+
+section:last-of-type{
+    margin-bottom: 10em;
 }
 
 /*
@@ -119,7 +122,14 @@ li>a:hover {
     text-decoration: underline;
 }
 
-
+footer{
+    position: relative;
+    float: right;
+    bottom: 2em;
+    right: 1em;
+    margin: auto;
+    height: 30px;   
+}
 
 /*I can't make it fit...
 fieldset{
