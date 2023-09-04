@@ -2,74 +2,108 @@
     body {
         background-color: lightblue;
     }
-    aside{
-        display: none; 
-        /*I want to hide the nav-bar, 
+
+    /*I want to hide the nav-bar, 
         place a three horizontal lines icon
         to access it,
         and make the section take the whole
         space, when the screen is small.*/
+    /*also, make it responsive*/
+
+    aside {
+        display: none;
+        
     }
-    section{
-        width: 100vw; 
+
+    section {
+        width: 100%;
     }
-  }
+}
+
+:root {
+    --stop: calc(100% / 11 * var(--i));
+    --box: hsl(300, 100%, 90%);
+    --shadow: hsl(295, 38%, 45%);
+    --c2: hsl(295, 38%, 62%);
+    --c3: hsl(295, 38%, 88%);
+}
 
 body {
     box-sizing: border-box;
+    margin: 0;
     background-color: #fff3da;
     font-family: monospace, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
+    overflow-x: hidden;
 }
 
-code, pre {
+code,
+pre {
     font-family: 'Nova Mono', monospace;
-    
+
 }
 
 header {
     width: 100%;
     height: auto;
     position: fixed;
-    top: 0px;
-    left: 10px;
+    top: 0;
+    left: -10px;
     margin: 0;
-    border-bottom-left-radius: 30px;
     text-align: center;
+    z-index: 1;
 }
 
 section {
     /*why does it have so much space on top?
     and why does it collapse into aside?*/
-    width: 60%;
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-right: auto;
+    position: relative;
+    left: 15rem;
+    right: 0;
+    top: 7em;
+    width: 70vw;
+    margin: 2rem 2rem;
+    padding: 2rem 1rem 1rem;
+    
 }
+
+/*
+section::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--c2) var(--stop), var(--c3) var(--stop));
+}  Trying to make a bar above the sections showing the % you're into the reading    */
 
 aside {
     width: 25%;
-    min-width: 210px;
-    max-width: 210px;
-    position: sticky;
-    overflow: auto;
-    float: right;
+    height: auto;
+    min-width: 250px;
+    max-width: 250px;
+    position: fixed;
     margin: 30px 10px 10px 10px;
 }
 
-header, section, aside {
-    background-color: #FFCCFF;
-    box-shadow: 10px 10px #97479e;
+header,
+section,
+aside {
+    background-color: var(--box);
+    box-shadow: 10px 10px var(--shadow);
 }
 
 section, aside {
-    height: auto;
-    border-radius: 30px;
-    padding: 20px;
-    top: 20%; /*affects only aside*/
+    overflow: auto;
+    top: 7em;
+}
+
+section,
+aside p {
+    padding: 1.2em;
+    text-align: justify;
 }
 
 li {
@@ -85,10 +119,7 @@ li>a:hover {
     text-decoration: underline;
 }
 
-p {
-    text-align: justify;
-    text-justify: inter-word;
-}
+
 
 /*I can't make it fit...
 fieldset{
@@ -98,23 +129,3 @@ fieldset{
     padding: 0;  
 }
  ...That's what she said!*/
-
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

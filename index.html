@@ -19,7 +19,7 @@
 
     <aside class="nav">
         <p>This is an overview of how to animate HTML elements using CSS programming.</p>
-        <nav id="navbar">
+        <nav id="navbar"> <!--nav links appear with header hidden when clicked-->
             <ul>
                 <li><a class="nav-link" href="#introduction">Introduction</a></li>
                 <li><a class="nav-link" href="#@keyframes">@Keyframes</a></li>
@@ -39,7 +39,7 @@
 
     <main id="main-doc">
 
-        <section class="main-section" id="introduction">
+        <section class="main-section" id="introduction" style="--i: 1"> <!--style="--i: 1" etc. is supposed to work for banner over the sections-->
             <h2>Introduction</h2>
             <p>CSS Animation is a technique that allows HTML elements to smoothly transition from one style to another.
             </p>
@@ -48,7 +48,7 @@
                 specific moments.</p>
         </section>
 
-        <section class="main-section" id="@keyframes">
+        <section class="main-section" id="@keyframes" style="--i: 2">
             <h2>@Keyframes</h2>
             <p>To define the CSS styles of the animation, you employ the at-rule <strong>@keyframes</strong> using the
                 syntax:</p>
@@ -59,7 +59,7 @@
     }</pre>
         </section>
 
-        <section class="main-section" id="animation-name">
+        <section class="main-section" id="animation-name" style="--i: 3">
             <h2>Animation Name</h2>
             <p>The <strong>animation-name</strong> property is used to connect the @keyframes rule to the element you
                 wish to animate.
@@ -81,7 +81,7 @@
             </fieldset>
         </section>
 
-        <section class="main-section" id="animation_duration">
+        <section class="main-section" id="animation_duration" style="--i: 4">
             <h2>Animation Duration</h2>
             <p>To set the time an animation will take to complete, you use the <strong>animation-duration</strong>
                 property</p>
@@ -142,7 +142,7 @@
 
         </section>
 
-        <section class="main-section" id="animation_delay">
+        <section class="main-section" id="animation_delay" style="--i: 5">
             <h2>Animation Delay</h2>
             <p>The <strong>animation-delay</strong> property is used to define a delay for the start of an animation.
             </p>
